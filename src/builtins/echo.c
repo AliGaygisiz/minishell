@@ -47,7 +47,7 @@ void	ft_echo(char **command)
 	if (!command[1])
 	{
 		printf("\n");
-		return ;
+		g_data->return_value = 0;
 	}
 	if (command[1])
 		check = check_flag(command[1]);

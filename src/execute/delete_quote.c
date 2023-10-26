@@ -45,20 +45,7 @@ static int	quote_type(char str, int *q_type)
 	return (0);
 }
 
-/*
-static char* change_data_mini(int single_or_double, char *temp, char *join_data)
-{
-	if (single_or_double != SINGLE_QUOTE && *temp == '$')
-	{
-		join_data = get_variable(temp++);
-		temp += variable_len(temp);
-	}
-	else
-		join_data = char_to_string(*temp++);
-	return (join_data);
-}
-*/
-static char	*change_data(char *str, int sord)
+char	*change_data(char *str, int sord)
 {
 	char	*temp;
 	char	*new_data;

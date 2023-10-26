@@ -140,6 +140,7 @@ int		builtin_check(char *command);
 char	*find_path(char *command);
 char	**get_path(void);
 void	delete_quote(char **command);
+char	*change_data(char *str, int sord);
 void	close_pipe_fd(void);
 
 //Builtins

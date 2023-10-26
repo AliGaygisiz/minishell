@@ -51,7 +51,7 @@ static void	ft_execute(char *abs_path, char **command, int index, int builtin)
 				nav_builtin(command);
 			else if (g_data->input_file != -1)
 				execve(abs_path, command, g_data->envp);
-			exit(1);
+			exit(g_data->return_value);
 		}
 	}
 	else if (chardb_len(command) != 0)

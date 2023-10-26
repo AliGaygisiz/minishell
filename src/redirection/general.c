@@ -31,7 +31,7 @@ char	**nav_redirection(char *content, int i)
 	char	**rtn_arr;
 	char	*temp;
 
-	temp = ft_strdup(content);
+	temp = change_data(ft_strdup((content)), 0);
 	while (temp[i] && g_data->input_file != -1)
 	{
 		if (temp[i] == '\'')

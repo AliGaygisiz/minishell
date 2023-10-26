@@ -1,4 +1,4 @@
-prefix=/Users/agaygisi/Desktop/minishell/lib/lib/readline
+prefix=/Users/agaygisi/Desktop/repotest/lib/lib/readline
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
