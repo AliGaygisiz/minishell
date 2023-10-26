@@ -51,7 +51,7 @@ char	*get_variable(char *input)
 	{
 		input++;
 		if (*input == '?')
-			return (ft_itoa(g_data->return_value % 256));
+			return (ft_itoa(g_data->return_value % 255));
 		i = variable_len(input);
 		temp = ft_substr(input, 0, i);
 		var_data = ft_strdup(ft_getenv(temp, 0));

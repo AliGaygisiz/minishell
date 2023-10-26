@@ -169,4 +169,6 @@ char	*get_variable(char *input);
 char	*ft_itoa(int n);
 void	ft_unset(char **var_names);
 void	handle_sigint(int sig);
+int		quote_type(char str, int *q_type);
+char	*change_data_vars(char *str, int sord);
 #endif

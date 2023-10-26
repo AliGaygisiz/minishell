@@ -24,7 +24,7 @@ static char	*char_to_string(char ch)
 	return (str);
 }
 
-static int	quote_type(char str, int *q_type)
+int	quote_type(char str, int *q_type)
 {
 	static int	hold = 0;
 
@@ -84,4 +84,32 @@ void	delete_quote(char **command)
 		command[i] = change_data(command[i], 0);
 		i++;
 	}
+}
+
+char	*change_data_vars(char *str, int sord)
+{
+	char	*temp;
+	char	*new_data;
+	char	*join_data;
+
+	temp = str;
+	new_data = ft_strdup("");
+	while (temp && *temp != 0)
+	{
+		quote_type(*temp, &sord);
+		if (*temp != 0)
+		{
+			if (sord != SINGLE_QUOTE && *temp == 36 && is_var_chr(*(temp + 1)))
+			{
+				join_data = get_variable(temp++);
+				temp += variable_len(temp);
+			}
+			else
+				join_data = char_to_string(*temp++);
+			new_data = ft_strjoin(new_data, join_data);
+			free(join_data);
+		}
+	}
+	free(str);
+	return (new_data);
 }
