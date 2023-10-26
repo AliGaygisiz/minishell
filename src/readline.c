@@ -47,7 +47,7 @@ void	reading_line(void)
 	while (1)
 	{
 		g_data->state_flag = READLINE;
-		g_data->line = readline("minishelli > ");
+		g_data->line = readline("minishell > ");
 		if (!g_data->line)
 		{
 			printf("exit\n");

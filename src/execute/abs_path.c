@@ -69,7 +69,6 @@ static char	*tilde_path(char *command)
 	}
 	tilde_path = ft_strjoin(tilde_path, command + 1);
 	free_command_db(g_data->path);
-	printf("tilde_path -: %s\n", tilde_path);
 	return (tilde_path);
 }
 

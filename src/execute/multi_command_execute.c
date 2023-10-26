@@ -56,7 +56,7 @@ static void	ft_execute(char *abs_path, char **command, int index, int builtin)
 	}
 	else if (chardb_len(command) != 0)
 	{
-		printf("minishelli: %s: command not found\n", command[0]);
+		printf("minishell: %s: command not found\n", command[0]);
 		g_data->rtn_arr[index] = 127;
 	}
 }

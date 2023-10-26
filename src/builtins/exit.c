@@ -36,7 +36,7 @@ void	ft_exit(char **command)
 	if (chardb_len(command) > 2)
 	{
 		printf("exit\n");
-		printf("minishelli: exit: too many arguments\n");
+		printf("minishell: exit: too many arguments\n");
 		exit (1);
 	}
 	else if (command[1])
@@ -44,7 +44,7 @@ void	ft_exit(char **command)
 		exit_value = new_atoi(command[1]);
 		if (ft_check_str(command[1]) || exit_value == -1)
 		{
-			printf("minishelli: exit: %s: numeric argument required\n", \
+			printf("minishell: exit: %s: numeric argument required\n", \
 				command[1]);
 			exit(255);
 		}

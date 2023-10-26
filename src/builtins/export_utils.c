@@ -69,7 +69,7 @@ int	equal_sign_index(char *str)
 				return (i);
 			else if (i == 0 || (i != 0 && str[i - 1] == 32))
 			{
-				printf("minishelli: export: `%s'", str);
+				printf("minishell: export: `%s'", str);
 				printf(": not a valid identifier.\n");
 				g_data->return_value = 1;
 				return (-1);

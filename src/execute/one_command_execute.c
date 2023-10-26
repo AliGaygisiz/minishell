@@ -31,7 +31,7 @@ static void	ft_execute(char *abs_path, char **command, int builtin)
 	}
 	else if (chardb_len(command) != 0)
 	{
-		printf("minishelli: %s: command not found\n", command[0]);
+		printf("minishell: %s: command not found\n", command[0]);
 		g_data->return_value = 127;
 	}
 }

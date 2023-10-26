@@ -42,7 +42,6 @@ void	change_position(char *dir, char *pwd)
 	else if (chdir(dir) == -1)
 	{
 		g_data->return_value = 1;
-		printf("folder location: %s\n", dir);
 		perror("cd");
 	}
 	else
