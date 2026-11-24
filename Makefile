@@ -39,12 +39,16 @@ SRCS = ./src/main.c \
 		./src/builtins/variables.c
 NAME = minishell
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g -fcommon
 INCLUDES	= -I. -I ./lib/lib/readline/include
 RM = rm -rf
 READLINE			=	-lreadline
 LIB				= ./lib/.minishell
+ifeq ($(shell uname),Linux)
+LINKERS		=  $(READLINE)
+else
 LINKERS		=  $(READLINE) -L ./lib/lib/readline/lib
+endif
 
 all: $(LIB) ${NAME}
 
