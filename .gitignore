@@ -1,0 +1,12 @@
+# Compiled binary
+/minishell
+
+# Runtime heredoc temp files
+/heredoc*
+
+# readline build tree downloaded by lib/Makefile
+/lib/readline/
+
+# macOS junk
+.DS_Store
+*.dSYM/
